@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="王亦菲 AI 产品经理个人网站高保真交互原型"
+    />
+    <meta name="theme-color" content="#f7f8ff" />
+    <title>王亦菲 · AI 产品经理</title>
+    <link rel="stylesheet" href="./prototype.css?v=20260823-86" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div id="app"></div>
+
+    <div class="drawer-backdrop" data-drawer-backdrop hidden></div>
+    <aside class="evidence-drawer" data-evidence-drawer aria-hidden="true" aria-labelledby="evidence-title">
+      <button class="drawer-close" type="button" data-close-evidence aria-label="关闭证据说明">×</button>
+      <p class="drawer-kicker">EVIDENCE NOTE</p>
+      <h2 id="evidence-title">证据说明</h2>
+      <div data-evidence-content></div>
+    </aside>
+
+    <section class="resume-assistant" data-assistant aria-hidden="true" aria-labelledby="assistant-title">
+      <header>
+        <div>
+          <span>离线精选问答</span>
+          <h2 id="assistant-title">问王亦菲</h2>
+        </div>
+        <button type="button" data-close-assistant aria-label="关闭履历助手">×</button>
+      </header>
+      <p class="assistant-privacy">仅基于本页公开资料回答，不连接模型，不保存输入。</p>
+      <div class="assistant-suggestions" data-assistant-suggestions></div>
+      <div class="assistant-answer" data-assistant-answer aria-live="polite">
+        选择一个问题，快速定位项目依据。
+      </div>
+      <form data-assistant-form>
+        <label class="sr-only" for="assistant-input">输入关于王亦菲经历的问题</label>
+        <input id="assistant-input" name="question" autocomplete="off" placeholder="例如：她做过哪些 Agent 项目？" />
+        <button type="submit">查询</button>
+      </form>
+    </section>
+
+    <noscript>
+      <main class="noscript-summary">
+        <h1>王亦菲 · AI Agent / AI 应用产品经理</h1>
+        <p>让 AI 不止能回答，更能完成任务。</p>
+        <p>代表项目：AI 日程管理 Agent、字节跳动 OLA、SophNet MaaS 平台。</p>
+        <p>当前页面是需要 JavaScript 才能切换五套方向与体验场景动画的高保真原型。</p>
+      </main>
+    </noscript>
+
+    <script src="./prototype.js?v=20260823-87"></script>
+  </body>
+</html>

@@ -248,9 +248,9 @@ const EVIDENCE = {
   ola: {
     title: "汽水音乐二线退款工单 Agent",
     nature: "本人主导的实习项目",
-    status: "当前处于灰度阶段",
-    body: "汽水音乐日均约 100 张二线工单，其中退款场景占比超过 60%。前期先手工跑通退款工单链路，通过率达到 95% 后进入灰度；随后设计主 Agent + 独立 Verify Sub Agent 的写入前门禁。",
-    boundary: "日均约 100 单与退款占比 60%+ 是业务规模；95% 是手工验证准入结果；约 92% 是退款场景连续一周实验准确率；约 80% 是二线人力节省结果。",
+    status: "已上线业务场景",
+    body: "独立推进汽水音乐工单 Agent 落地：基于 OLA Work 云端定时任务，按工单 ID 隔离子会话；将人工客服 SOP 沉淀为业务 Skill，并接入 NASA CLI 完成信息查询、退款执行、用户触达和结果回写。",
+    boundary: "95.7% 为汽水音乐业务覆盖率，99.1% 为执行正确率；5 个已上线业务场景和节约 10 人日的人力投入属于 OLA Work 场景推广成果，不应解读为单个工单 Agent 的独立收益。",
   },
   sophnet: {
     title: "把 Skill 当作可运营的平台对象",
@@ -279,14 +279,14 @@ const ASSISTANT_ANSWERS = {
   ola: {
     question: "字节 OLA 项目做了什么？",
     answer:
-      "主导汽水音乐二线退款工单 Agent：先手工验证可行性，再设计定时接单、证据检索、独立 Verify 门禁、内部备注写入与工单挂起的处理闭环。项目当前处于灰度阶段。",
+      "独立推进汽水音乐工单 Agent 落地：用 OLA Work 云端定时任务按工单 ID 隔离处理，将人工客服 SOP 沉淀为 Skill，并通过 NASA CLI 完成查询、退款、触达及结果回写；同时推进抖音社区、直播和汽水音乐场景应用。",
     href: "#ola-case",
     citation: "查看 OLA 案例",
   },
   metrics: {
     question: "为什么页面没有放很多数字？",
     answer:
-      "页面会区分业务规模、手工验证、灰度实验和业务价值。字节案例中，日均约 100 单、退款占比 60%+ 是规模；95% 是准入结果；约 92% 是连续一周实验准确率；约 80% 是人力节省结果。",
+      "页面会区分不同指标口径。汽水音乐工单 Agent 的业务覆盖率为 95.7%、执行正确率为 99.1%；OLA Work 已上线 5 个业务场景，节约 10 人日的人力投入。",
     href: "#evidence-led",
     citation: "查看证据原则",
   },
@@ -507,12 +507,12 @@ function variantA() {
             <div class="case-index">01 / BUSINESS AGENT</div>
             <div class="case-copy">
               <span>字节跳动 · OLA · 2026.07 至今</span>
-              <h3>让 24 个工具不再只是工具集合，而是一条可追踪的客服任务链。</h3>
-              <p>围绕主 Agent、Verify 与工具调用重构原有流程，聚焦需求拆解、流程设计、方案推动和实验验证。</p>
+              <h3>把人工客服 SOP 沉淀为可执行、可回写的工单 Agent。</h3>
+              <p>基于 OLA Work 按工单 ID 隔离云端子会话，通过 NASA CLI 串联业务查询、退款执行、用户触达与工单状态流转。</p>
               <button type="button" class="inline-evidence" data-evidence="ola">如何证明个人贡献 <span>↗</span></button>
             </div>
             <div class="ola-flow" aria-label="OLA 流程示意">
-              <span>用户问题</span><i>→</i><span>主 Agent</span><i>→</i><span>Verify</span><i>→</i><span>工具执行</span><i>→</i><span>结果校验</span>
+              <span>读取工单</span><i>→</i><span>检索与判断</span><i>→</i><span>执行处理</span><i>→</i><span>结果回写</span>
             </div>
           </article>
 
@@ -608,11 +608,11 @@ function variantB() {
             </div>
             <div>
               <p>字节跳动 · OLA</p>
-              <h3>从 24 个工具，重构一条可追踪的客服任务链。</h3>
+              <h3>把人工客服 SOP，落成可执行的云端工单 Agent。</h3>
               <ul>
-                <li>需求拆解与问题边界</li>
-                <li>主 Agent 与 Verify 流程设计</li>
-                <li>方案推动与实验验证</li>
+                <li>按工单 ID 隔离子会话</li>
+                <li>业务 Skill 与 NASA CLI 工具接入</li>
+                <li>Skill 生成、调优与场景推广</li>
               </ul>
             </div>
             <button type="button" data-evidence="ola">证据说明 ↗</button>
@@ -702,9 +702,9 @@ function variantC() {
               <div class="c-case-top"><span>BYTE OLA</span><span>2026.07 至今</span></div>
               <h3>让 Agent 工具进入一条<br />可追踪的客服流程。</h3>
               <div class="c-tool-constellation" aria-label="OLA 组成">
-                <strong>MAIN AGENT</strong><span>VERIFY</span><span>24 TOOLS</span><span>WORKFLOW</span>
+                <strong>OLA WORK</strong><span>业务 SKILL</span><span>NASA CLI</span><span>结果回写</span>
               </div>
-              <p>证明业务流程重构、跨团队推进与验证能力。</p>
+              <p>从工单自动处理延伸到服务场景 Skill 的生成、调优和推广。</p>
               <button type="button" data-evidence="ola">OPEN EVIDENCE ↗</button>
             </article>
             <article class="c-case-sophnet" id="sophnet-case" data-reveal>
@@ -790,12 +790,12 @@ function variantD() {
             <div class="d-case-index"><span>FILE 01</span><strong>2026.07<br />— 至今</strong></div>
             <div class="d-case-main">
               <p>字节跳动 · AI 客服 OLA</p>
-              <h3>把 24 个工具组织成一条可追踪、可校验、可兜底的客服任务链。</h3>
-              <dl><div><dt>产品场景</dt><dd>汽水音乐二线工单自动关单</dd></div><div><dt>核心判断</dt><dd>主 Agent 处理，Verify Agent 独立校验</dd></div><div><dt>个人贡献</dt><dd>需求拆解、流程设计、工具规划、实验验证</dd></div></dl>
+              <h3>把人工客服 SOP 组织成可执行、可回写的云端工单 Agent。</h3>
+              <dl><div><dt>产品场景</dt><dd>汽水音乐二线工单自动处理</dd></div><div><dt>核心设计</dt><dd>按工单 ID 隔离会话，业务 Skill 驱动处理</dd></div><div><dt>个人贡献</dt><dd>Agent 落地、NASA CLI 接入、Skill 生成与调优</dd></div></dl>
               <button type="button" class="d-evidence-link" data-evidence="ola">展开贡献与可信边界 ↗</button>
             </div>
             <div class="d-ink-flow" aria-label="OLA 任务链">
-              <span>读取工单</span><i>→</i><span>主 Agent</span><i>→</i><span>Verify</span><i>→</i><span>工具执行</span><i>→</i><span>结果校验</span>
+              <span>读取工单</span><i>→</i><span>查询与判断</span><i>→</i><span>执行处理</span><i>→</i><span>结果回写</span>
             </div>
           </article>
 
@@ -894,7 +894,7 @@ function variantD() {
       <div class="d-resume-backdrop" data-resume-backdrop hidden></div>
       <aside class="d-resume-viewer" data-resume-viewer aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="d-resume-title">
         <header>
-          <div><span>STRUCTURED RESUME · UPDATED 2026.08</span><h2 id="d-resume-title">王亦菲 · AI 产品经理</h2></div>
+          <div><span>STRUCTURED RESUME · UPDATED 2026.09</span><h2 id="d-resume-title">王亦菲 · AI 产品经理</h2></div>
           <div><button type="button" data-print-resume>打印 / 保存 PDF</button><button type="button" data-close-resume aria-label="关闭简历">关闭 ×</button></div>
         </header>
         <div class="d-resume-body">
@@ -905,7 +905,7 @@ function variantD() {
           </aside>
           <article>
             <section><span>PROFILE</span><h3>把模型能力转化为可评测、可控、能进入真实工作流的产品价值。</h3></section>
-            <section><span>EXPERIENCE</span><div class="d-resume-entry"><time>2026.07 — 至今</time><h3>字节跳动 · AI 产品实习生</h3><p>参与 AI 客服 OLA 在线服务 Agent Harness，推进汽水音乐二线工单自动关单；完成需求拆解、双 Agent 流程、工具规划与实验验证。</p></div><div class="d-resume-entry"><time>2026.03 — 2026.06</time><h3>比特大陆 · AI 产品实习生</h3><p>参与 SophNet 企业级 MaaS / Agent 平台，交付客户管理 Skill 与企业后台消费明细模块。</p></div></section>
+            <section><span>EXPERIENCE</span><div class="d-resume-entry"><time>2026.07 — 至今</time><h3>字节跳动 · AI 产品实习生</h3><p>独立推进汽水音乐工单 Agent 落地，以 OLA Work、业务 Skill 和 NASA CLI 完成工单自动处理；推动抖音社区、直播和汽水音乐服务场景应用。</p></div><div class="d-resume-entry"><time>2026.03 — 2026.06</time><h3>比特大陆 · AI 产品实习生</h3><p>参与 SophNet 企业级 MaaS / Agent 平台，交付客户管理 Skill 与企业后台消费明细模块。</p></div></section>
             <section><span>PROJECT</span><div class="d-resume-entry"><time>2026.02 — 2026.03</time><h3>AI 日程管理 Agent · 项目负责人</h3><p>独立完成从需求、产品方案到桌面端 MVP，重点设计 Agent Runtime、结构化记忆、多日历来源与评测闭环。</p></div></section>
             <section><span>CAPABILITIES</span><p>产品与需求分析 · AI 产品与 Agent 设计 · AI Coding · 数据与评测 · 技术协作</p></section>
           </article>
@@ -974,28 +974,29 @@ function variantE() {
           <article class="e-case e-case-ola" data-reveal>
             <div class="e-case-copy">
               <h2 class="e-case-role-title">字节跳动 · AI 产品实习生</h2>
-              <p class="e-case-team">AI 客服 OLA Agent Harness 团队</p>
+              <p class="e-case-team">抖音在线 · AI 客服 Agent 团队</p>
               <div class="e-case-project-intro">
                 <h3>端到端智能工单 Agent</h3>
-                <p class="e-case-project-summary">面向汽水二线工单，自动读取工单与会话、检索知识、查询业务事实并生成处理方案，调用退款/再次触达/服务方案透传等工具实现工单完结。</p>
+                <p class="e-case-project-summary">面向汽水音乐工单，以“读工单沟通记录、查业务知识与信息、判处理方案、办退款与用户触达”的链路，替代人工客服完成工单处理。</p>
               </div>
               <ul class="e-ola-highlights" aria-label="个人贡献重点">
-                <li><span>项目建设</span><p>参与 OLA 在线服务 Agent Harness 场景应用，推进汽水音乐二线退款工单自动关单；基于 OLA Work 将标准化人工流程重构为云端自动处理链路。</p></li>
-                <li><span>方案落地</span><p>完成效果验证与方案设计，搭建“主 Agent 处理 + Verify Agent 独立校验”双智能体流程；规划 <b>24 项</b> ByteHi CLI 能力，并建立日志、Trace 与异常升级机制。</p></li>
+                <li><span>部门业务</span><p>参与抖音在线 AI 客服 Agent 应用建设，独立推进汽水音乐工单 Agent 落地，实现工单读取、知识与业务信息查询、方案判断、退款执行、用户触达及工单完结。</p></li>
+                <li><span>方案落地</span><p>配置 OLA Work 云端定时任务，按工单 ID 拆分独立子会话；将人工客服 SOP 沉淀为业务 Skill，覆盖证据收集、订单匹配、退款资格判断、退款执行、用户触达、内部备注和工单状态流转；接入 NASA CLI，打通工单、IM 会话、知识库、账号订单、退款工具及处理结果回写。</p></li>
+                <li><span>业务推广</span><p>推动 OLA Work 在抖音社区、直播、汽水音乐三大业务方向的应用；编写服务场景 Skill 生成器与调优器，协助业务团队形成“上传 SOP → Skill 生成 → 调优 → 上线”的闭环流程。</p></li>
               </ul>
               <div class="e-ola-results">
-                <p class="e-ola-results-label">业务收益</p>
-                <div class="e-ola-context" aria-label="业务收益数据">
-                  <div><strong>≈100</strong><span>张二线工单 / 日</span></div>
-                  <div><strong>60%+</strong><span>退款场景占比</span></div>
-                  <div><strong>≈92%</strong><span>连续一周准确率</span></div>
-                  <div><strong>≈80%</strong><span>人力节省 · 6→1</span></div>
+                <p class="e-ola-results-label">项目成果</p>
+                <div class="e-ola-context" aria-label="项目成果数据">
+                  <div><strong>95.7%</strong><span>汽水音乐业务覆盖率</span></div>
+                  <div><strong>99.1%</strong><span>执行正确率</span></div>
+                  <div><strong>5</strong><span>OLA Work 已上线业务场景</span></div>
+                  <div><strong>10</strong><span>节约人力投入 · 人日</span></div>
                 </div>
               </div>
             </div>
             <figure class="e-case-visual e-case-ola-visual">
               <img class="e-case-field-photo" src="./assets/bytedance-internship-v1.jpeg" alt="字节跳动实习期间的办公环境与个人工牌" />
-              <figcaption><span>FIELD NOTE · BYTEDANCE 2026</span><strong>在真实业务现场推进 Agent 灰度</strong></figcaption>
+              <figcaption><span>FIELD NOTE · BYTEDANCE 2026</span><strong>让 Agent 进入真实客服流程</strong></figcaption>
             </figure>
           </article>
 

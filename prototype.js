@@ -976,7 +976,7 @@ function variantE() {
               <h2 class="e-case-role-title">字节跳动 · AI 产品实习生</h2>
               <p class="e-case-team">抖音在线 · AI 客服 Agent 团队</p>
               <div class="e-case-project-intro">
-                <h3>端到端智能工单 Agent</h3>
+                <h3>工单 Agent</h3>
                 <p class="e-case-project-summary">面向汽水音乐工单，以“读工单沟通记录、查业务知识与信息、判处理方案、办退款与用户触达”的链路，替代人工客服完成工单处理。</p>
               </div>
               <ul class="e-ola-highlights" aria-label="个人贡献重点">
